@@ -4,3 +4,10 @@ export const addItem = (state, { value }) => {
         { task: value, completed: false },
     ]};
 };
+
+export const removeItem = ( state, { index } ) => {
+    const updated = [...state.items];
+    updated.splice(index,1);
+    return { items: [...updated]};
+}
+
