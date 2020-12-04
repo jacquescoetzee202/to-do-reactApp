@@ -1,6 +1,6 @@
 export const addItem = (state, { value }) => {
-    return {items:[
-        { task: "Hello", completed: false }, 
-        { task: value, completed: false }
+    return { items: [
+        ...state.items,
+        { task: value, completed: false },
     ]};
 };
